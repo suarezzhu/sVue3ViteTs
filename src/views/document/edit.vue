@@ -1,4 +1,3 @@
-
 /**
 * @name: edit
 * @author: suarezzhu
@@ -8,12 +7,12 @@
 */
 
 <template>
-$END$
+
 </template>
 
 <script>
 export default {
-name: "edit"
+  name: "edit"
 }
 </script>
 

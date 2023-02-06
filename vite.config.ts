@@ -32,15 +32,16 @@ const viteConfig=defineConfig((mode:ConfigEnv)=>{
     // 开发代理模式
     server: {
       host: '0.0.0.0',
-      port: env.VITE_PORT as unknown as number,
-      open: env.VITE_OPEN,
+      port: 8888,
+      // open: env.VITE_OPEN,
       hmr: true,
       proxy: {
-        '/gitee': {
-          target: 'https://gitee.com',
+        '/sua': {
+          target: 'http://localhost:8080/sua',
           ws: true,
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/gitee/, ''),
+          // rewrite: (path) => path.replace(/^\/gitee/, ''),
+          rewrite: (path) => path.replace(/^\/sua/, ''),
         },
       },
     },

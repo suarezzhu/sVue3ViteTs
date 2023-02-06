@@ -2,6 +2,12 @@
 export default {
 	router: {
 		home: '首页',
+		site: '网站',
+		book: '图书',
+		document: '文档',
+		documentHome: '列表',
+		movie: '视频',
+		documentEdit: '编辑',
 		system: '系统设置',
 		systemMenu: '菜单管理',
 		systemRole: '角色管理',

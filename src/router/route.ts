@@ -63,6 +63,111 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				},
 			},
 			{
+				path: '/site',
+				name: 'site',
+				component: () => import('/@/views/site/index.vue'),
+				meta: {
+					title: 'message.router.site',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin', 'common'],
+					icon: 'iconfont icon-gongju',
+				},
+			},
+			{
+				path: '/book',
+				name: 'book',
+				component: () => import('/@/views/book/index.vue'),
+				meta: {
+					title: 'message.router.book',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin', 'common'],
+					icon: 'iconfont icon-gongju',
+				},
+			},
+			{
+				path: '/movie',
+				name: 'movie',
+				component: () => import('/@/views/movie/index.vue'),
+				meta: {
+					title: 'message.router.movie',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin', 'common'],
+					icon: 'iconfont icon-gongju',
+				},
+			},
+
+			{
+				path: '/document',
+				name: 'document',
+				meta: {
+					title: 'message.router.document',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin', 'common'],
+					icon: 'iconfont icon-gongju',
+				},
+				children: [
+					{
+						path: '/document/home',
+						name: 'documentHome',
+						component: () => import('/@/views/document/home.vue'),
+						meta: {
+							title: 'message.router.documentHome',
+							isLink: '',
+							isHide: false,
+							isKeepAlive: true,
+							isAffix: false,
+							isIframe: false,
+							roles: ['admin'],
+							icon: 'iconfont icon-caidan',
+						      },
+					  },
+					{
+						path: '/document/edit',
+						name: 'documentEdit',
+						component: () => import('/@/views/document/edit.vue'),
+						meta: {
+							title: 'message.router.documentEdit',
+							isLink: '',
+							isHide: false,
+							isKeepAlive: true,
+							isAffix: false,
+							isIframe: false,
+							roles: ['admin'],
+							icon: 'iconfont icon-caidan',
+						},
+					}
+
+
+
+			        ]
+			},
+
+
+
+
+
+
+
+
+
+
+			{
 				path: '/system',
 				name: 'system',
 				component: () => import('/@/layout/routerView/parent.vue'),
