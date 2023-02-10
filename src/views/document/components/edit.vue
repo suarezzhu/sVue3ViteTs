@@ -16,11 +16,28 @@
 </template>
 
 <script setup lang="ts" name="docWangEditor">
-import {defineAsyncComponent, markRaw, reactive} from 'vue';
+import {defineAsyncComponent, markRaw, reactive, watch} from 'vue';
 import docApi from "/@/api/doc";
 
 // 引入组件
 const Editor = defineAsyncComponent(() => import('/@/components/editor/index.vue'));
+
+
+// 定义父组件传过来的值
+const props = defineProps({
+  html: {
+    type: String,
+    default: () => '',
+  },
+});
+
+watch(
+    () => props.html,
+    (nv,oldv) => {
+      state.editor.htmlVal=nv
+    }
+);
+
 
 // 定义变量内容
 const state = reactive({

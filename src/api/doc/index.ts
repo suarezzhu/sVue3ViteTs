@@ -68,7 +68,13 @@ const docApi=()=>{
                 data,
             })
         },
-        
+        addFolder:(data?:Object)=>{
+            return request <ResultData<any>>({
+                url: '/sua/suaDoc/addFolder',
+                method: 'post',
+                data,
+            })
+        },
         
         
     }
